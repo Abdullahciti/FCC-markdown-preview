@@ -1,0 +1,137 @@
+:root {
+  --bg-main-color: rgb(4, 158, 142);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  background: var(--bg-main-color);
+  padding: 35px 0;
+  width: 100%;
+  min-height: 100vh;
+}
+.editor-container {
+  min-height: 155px;
+  min-width: 40%;
+  max-width: 65%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.editor-container .editor {
+  width: 100%;
+  resize: vertical;
+  padding: 8px 5px;
+  background: var(--bg-main-color);
+  border: none;
+  outline: none;
+  /* font-size: 8px; */
+  font-weight: lighter;
+  min-height: 130px;
+  &::-webkit-scrollbar {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    background: #fff;
+    border-radius: 2px;
+    padding: 15px 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #30a17c;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  &::-webkit-scrollbar-thumb:active,
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgb(26, 136, 118);
+  }
+}
+.viewer-container {
+  min-width: 55%;
+  max-width: 60%;
+  background: rgb(4, 158, 142);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.8);
+  border: 1px solid black;
+}
+.viewer-container .viewer {
+  padding: 4px 8px;
+  background-color: var(--bg-main-color);
+  /* font-size: 14px; */
+  min-height: 15vh;
+}
+.header {
+  padding: 18px 10px;
+  background: rgb(11, 115, 105);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px;
+  border-bottom: 1px solid black;
+  h3 {
+    color: black;
+    font-weight: 600;
+  }
+}
+p,
+h1,
+h2,
+h3 {
+  padding: 6px;
+}
+blockquote {
+  width: fit-content;
+  color: white;
+  padding: 10px 6px;
+  border: 1px solid black;
+  margin: 10px 0;
+}
+.viewer table {
+  width: 100%; 
+  border-collapse: collapse; 
+  margin: 20px 0; 
+}
+.viewer th {
+  background-color: rgb(26, 136, 118); 
+  color: white; 
+  text-align: left; 
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.viewer td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.viewer pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px; 
+  margin: 15px 0; 
+}
+.viewer code {
+  font-size: 1.25em;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  padding: 2px 4px;
+  color: #d63316;
+}
+.viewer ul {
+  padding-left: 20px;
+}
+.viewer ol {
+  padding-left: 20px; 
+}
+.viewer li {
+  margin-bottom: 10px;
+}
+.viewer ul ul {
+  padding: 12px 0px 0px 10px;
+}
+img {
+  width: 100%;
+  padding: 30px;
+}
